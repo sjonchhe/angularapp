@@ -6,39 +6,51 @@ import {User} from '../../models/User';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users: User[]
+  users: User[];
+  showExtended: boolean = true;
+  loaded: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
-    this.users= [
-      {
-        firstName: 'Sandesh',
-        lastName: 'Jonchhe',
-        age: 23,
-        address: {
-          street: 'Maharajgunj',
-          city: 'Kathmandu'
-        }
-      },
-      {
-        firstName: 'John',
-        lastName: 'Doe',
-        age: 25,
-        address: {
-          street: 'Lazimpat',
-          city: 'Kathmandu'
-        }
-      },
-      {
-        firstName: 'Jane',
-        lastName: 'Doe',
-        age: 21,
-        address: {
-          street: 'Pulchowk',
-          city: 'Lalitpur'
-        }
-      }
-    ];
+
+      setTimeout(() =>{
+        this.users= [
+          {
+            firstName: 'Sandesh',
+            lastName: 'Jonchhe',
+            age: 23,
+            address: {
+              street: 'Maharajgunj',
+              city: 'Kathmandu'
+            }
+          },
+          {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 25,
+            address: {
+              street: 'Lazimpat',
+              city: 'Kathmandu'
+            }
+          },
+          {
+            firstName: 'Jane',
+            lastName: 'Doe',
+            age: 21,
+            address: {
+              street: 'Pulchowk',
+              city: 'Lalitpur'
+            }
+          }
+         
+        ];
+        this.loaded = true;
+
+      },2000);  
+      
+    
+    this.showExtended= true;
   }
 
 }
