@@ -5,5 +5,7 @@ export interface User{
     address: {
         street: string,
         city: string
-    }
+    },
+    image?: string;
+    isActive?: boolean;
 }
