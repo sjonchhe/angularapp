@@ -28,7 +28,9 @@ export class UsersComponent implements OnInit {
               city: 'Kathmandu'
             },
             image: 'http://lorempixel.com/600/600/sports/1',
-            isActive: true
+            isActive: true,
+            balance: 100,
+            registered: new Date('01/02/2018 08:30:00')
           },
           {
             firstName: 'John',
@@ -39,7 +41,9 @@ export class UsersComponent implements OnInit {
               city: 'Kathmandu'
             },
             image: 'http://lorempixel.com/600/600/people/3',
-            isActive: false
+            isActive: false,
+            balance: 500,
+            registered: new Date('01/05/2012 08:30:00')
 
           },
           {
@@ -51,7 +55,9 @@ export class UsersComponent implements OnInit {
               city: 'Lalitpur'
             },
             image: 'http://lorempixel.com/600/600/people/1',
-            isActive: true
+            isActive: true,
+            balance: 50,
+            registered: new Date('11/02/2019 10:30:00')
           }
          
         ];

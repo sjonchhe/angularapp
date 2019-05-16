@@ -7,10 +7,13 @@
         <img *ngIf="user.image" [src]="user.image" alt="" class="img-fluid">
       </div>
       <div class="col-sm-8">
-          <h3 [ngStyle]="currentStyles">{{user.firstName}} {{user.lastName}}</h3>
+          <h3 [ngStyle]="currentStyles">{{user.firstName | uppercase}} {{user.lastName | lowercase}}</h3>
           <ul *ngIf="showExtended && user.age && user.address" class="list-group">
             <li class="list-group-item">Lives in {{user.address.street}}, {{user.address.city}}, {{user.address.state}}</li>
             <li class="list-group-item">Age: {{ user.age }}</li>
+            <li class="list-group-item">Balance: {{user.balance | currency:"GBP"}} until {{1 | percent}}</li>
+            <li class="list-group-item">Joined: {{user.registered | date : "yyyy" }}</li>
+
           </ul>
       </div>
     </div>
