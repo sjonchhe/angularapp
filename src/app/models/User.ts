@@ -6,8 +6,6 @@ export interface User{
         street: string,
         city: string
     },
-    image?: string,
     isActive?: boolean,
-    balance?: number,
     registered?: any
 }
