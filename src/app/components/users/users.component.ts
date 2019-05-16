@@ -29,7 +29,7 @@ export class UsersComponent implements OnInit {
             },
           
             isActive: true,
-          
+            hide: true,
             registered: new Date('01/02/2018 08:30:00')
           },
           {
@@ -42,7 +42,7 @@ export class UsersComponent implements OnInit {
             },
         
             isActive: false,
-       
+            hide: true,
             registered: new Date('01/05/2012 08:30:00')
 
           },
@@ -56,7 +56,7 @@ export class UsersComponent implements OnInit {
             },
            
             isActive: true,
-          
+            hide: true,
             registered: new Date('11/02/2019 10:30:00')
           }
          
@@ -88,4 +88,19 @@ export class UsersComponent implements OnInit {
   //   }
   // }
   
+  addUser(user:User)
+  {
+    this.users.push(user);
+  }
+
+  // fireEvent(e)
+  // {
+  //   // console.log('Button Clicked');
+  //   console.log(e.typ);
+  // }
+
+  toggleHide(user)
+  {
+    user.hide= !user.hide;
+  }
 }
